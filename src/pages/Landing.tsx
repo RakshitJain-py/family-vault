@@ -5,7 +5,7 @@ import { Search, X, Building2, TrendingUp, Shield, Plus, Eye, Lock, Handshake } 
 import { useAppContext } from '@/context/AppContext';
 
 const stagger = { animate: { transition: { staggerChildren: 0.07 } } };
-const fadeUp = { initial: { opacity: 0, y: 12 }, animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] } } };
+const fadeUp = { initial: { opacity: 0, y: 12 }, animate: { opacity: 1, y: 0, transition: { duration: 0.35 } } };
 
 const Landing = () => {
   const [query, setQuery] = useState('');
