@@ -7,8 +7,13 @@ import FloatingSaathi from "./components/FloatingSaathi";
 import ToastContainer from "./components/ToastContainer";
 import Landing from "./pages/Landing";
 import BanksPage from "./pages/BanksPage";
+import BankDetailPage from "./pages/BankDetailPage";
 import StocksPage from "./pages/StocksPage";
+import StockDetailPage from "./pages/StockDetailPage";
 import InsurancePage from "./pages/InsurancePage";
+import InsuranceDetailPage from "./pages/InsuranceDetailPage";
+import FindAssetsPage from "./pages/FindAssetsPage";
+import FindAssetsResults from "./pages/FindAssetsResults";
 import WillWizard from "./pages/WillWizard";
 import RecoveryPage from "./pages/RecoveryPage";
 import ProfilePage from "./pages/ProfilePage";
@@ -22,12 +27,18 @@ const AnimatedRoutes = () => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Landing />} />
+        <Route path="/find-assets" element={<FindAssetsPage />} />
+        <Route path="/find-assets/results" element={<FindAssetsResults />} />
         <Route path="/assets/banks" element={<BanksPage />} />
+        <Route path="/assets/banks/:bankSlug" element={<BankDetailPage />} />
         <Route path="/assets/stocks" element={<StocksPage />} />
+        <Route path="/assets/stocks/:brokerSlug" element={<StockDetailPage />} />
         <Route path="/assets/insurance" element={<InsurancePage />} />
+        <Route path="/assets/insurance/:insurerSlug" element={<InsuranceDetailPage />} />
         <Route path="/will-wizard" element={<WillWizard />} />
         <Route path="/recovery" element={<RecoveryPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/legal-help" element={<UnderDev />} />
         <Route path="/privacy" element={<UnderDev />} />
         <Route path="/terms" element={<UnderDev />} />
         <Route path="*" element={<UnderDev />} />
