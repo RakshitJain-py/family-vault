@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Asset Map', target: '/#asset-map' },
   { label: 'Will Wizard', target: '/will-wizard' },
   { label: 'Recovery Switch', target: '/recovery' },
+  { label: 'Legal Help', target: '/legal-help' },
   { label: 'Contact', target: '/#contact' },
 ];
 
